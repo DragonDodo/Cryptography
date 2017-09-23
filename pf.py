@@ -126,18 +126,15 @@ def climb(k1, k2, ciphers, quads, cribs = None):
     for ii in range(len(k1)):
         for jj in range(ii+1, len(k1)-1):
             sk1 = swapPair(k1,ii,jj)
-            #print best[0], "first"
-            #print ss, "second"
-            ap = exp((best[0] - ss)/1000*T)
-            #print ap, "ap"
+           
+            
             best = testKeys(ciphers, sk1, k2, quads, best, cribs)
-            if ii < 5 and jj < 5 and ap > random():
+            if ii < 5 and jj < 5:
                 sc1 = swapCols(k1,ii,jj)
                 sr1 = swapRows(k1,ii,jj)
                 sc2 = swapCols(k2,ii,jj)
                 sr2 = swapRows(k2,ii,jj)
-                T = T*0.8
-                #print T ,"T"
+                
                 
                 best = testKeys(ciphers, sc1, k2, quads, best, cribs)                
                 best = testKeys(ciphers, k1, sc2, quads, best, cribs)            
