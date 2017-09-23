@@ -3,7 +3,6 @@ from random import shuffle, random, choice
 from math import exp, log
 KEY1 = KEY2 = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
 
-
 def unpf( ct, key ):
     out = ""
     while ct:
